@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Task</title>
+    <link rel="stylesheet" type="text/css" href="frontend_test.css" />
+</head>
+
+<body>
+    <header>
+        Header
+    </header>
+    <div class="content">
+        <div class="overlay">
+            <h1>Title Above Image</h1>
+            <button onclick="showAlert()">Click Here</button>
+        </div>
+    </div>
+    <footer>
+        Footer
+    </footer>
+</body>
+<script>
+    // Create a new image element
+    const img = document.createElement('img');
+
+    // Set the source of the image
+    img.src = 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg';
+
+    // Set the image's position and size properties
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.objectFit = 'cover';
+
+    // Get a reference to the parent element
+    const parentElement = document.querySelector('.content');
+
+    // Append the child element to the parent element
+    parentElement.appendChild(img);
+
+    var showAlert = () => {
+        alert("Hello World!");
+    }
+</script>
+
+</html>
